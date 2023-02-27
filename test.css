@@ -1,0 +1,7 @@
+.popup {
+    position: fixed;
+    left: 50px; /* change the left value as needed */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  

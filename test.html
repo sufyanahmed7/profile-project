@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stylish Pop-up</title>
+	<style>
+		.popup {
+			position: fixed;
+			top: 0;
+			center: 0;
+			background-color: #fac5f1;
+			color: rgb(12, 11, 11);
+			padding: 20px;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			z-index: 9999;
+		}
+
+		.popup.show {
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div class="popup" id="popup">
+        <div class="popup-content">
+          <span class="popup-close" id="popup-close">&times;</span>
+          <p>Greetings! We hope you find what you're looking for.</p>
+        </div>
+      </div>
+      
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+  setTimeout(function() {
+    $('#popup').fadeIn('slow');
+  }, 1000); // show after 1 second
+  
+  setTimeout(function() {
+    $('#popup').fadeOut('slow');
+  }, 10000); // hide after 10 seconds
+  
+  $('#popup-close').click(function() {
+    $('#popup').fadeOut('slow');
+  });
+});
+	</script>
+</body>
+</html>
