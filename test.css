@@ -1,62 +1,59 @@
-body {
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
-.heading {
-  background-color: antiquewhite;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
 }
-.main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 80vh;
+
+nav a {
+	position: relative;
+	text-decoration: none;
 }
-.profile img {
+
+nav a:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	border-bottom: 2px solid transparent;
+	transition: border-color 0.3s ease-in-out;
+}
+
+nav a:hover:after {
+	border-color: #ff0000; /* Change this to the desired color */
+}
+.navbar-brand img {
+  max-height: 200px; /* Adjust as needed */
+  margin-top: -10px; /* Adjust as needed */
   width: 400px;
-  margin-top: 30px;
 }
-.profile-para {
-  width: 600px;
-  line-height: 25px;
-}
-.box-div {
-  background-color: antiquewhite;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-.box-heading {
-  text-align: center;
-  width: 500px;
-  margin-bottom: 40px;
-}
-.gridbox {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  column-gap: 100px;
-  row-gap: 50px;
-  justify-content: center;
-}
-.bottom-heading {
-  text-align: center;
-  width: 700px;
-  word-spacing: 7px;
-  margin-top: 20px;
-}
-.box {
+.img-size {
   width: 200px;
-  height: 100px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
-  border-radius: 10px;
+  height: 130px;
+}
+.navbar-brand img {
+  margin-bottom: 0; /* Remove bottom margin of the image */
+  height: 80px; /* Set a fixed height for the image */
+}
+
+.navbar-nav {
+  margin-top: 0; /* Remove top margin of the navbar */
+}
+.blur-image {
+	filter: blur(2px);
+  }
+  button{
+    font-weight: bolder;
+  }
+  body {
+    background-image: url(pexels-roman-odintsov-4551832.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
